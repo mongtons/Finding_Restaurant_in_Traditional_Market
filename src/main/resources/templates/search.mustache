@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>검색 결과 | 춘재</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/search/style.css">
+    <link rel="stylesheet" href="../css/universal.css">
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-search-bar">
+            <div class="search-bar">
+                <input type="text" name="search-input" id="search-input" placeholder="무엇을 찾고 계신가요?" maxlength="50">
+                <a class="search" id="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+<!--        <p class="top-title" id="top-title">검색하신 <span class="value">&&</span>이 가장 많은 곳은 <span class="market">**</span>시장이에요. <span class="market">**</span>시장의 <span class="value">&&</span>매장을 소개해 드릴게요</p>-->
+        
+        <div class="lists">
+            {{#List}}
+            <div class="list">
+                <p class="title">{{title}}</p>
+                <p class="category">{{category}}</p>
+                <p class="address">{{address}}</p>
+            </div>
+            {{/List}}
+        </div>
+
+    </main>
+
+    <script src="../js/search/search.js"></script>
+</body>
+
+</html>

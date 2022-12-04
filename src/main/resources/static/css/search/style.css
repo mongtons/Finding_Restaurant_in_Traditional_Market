@@ -1,0 +1,102 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #009FE3;
+}
+
+header > .top-search-bar {
+    width: 700px;
+    /* background-color: yellow; */
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.search-bar {
+    width: 70%;
+    /* background-color: green; */
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 35px;
+    /* margin-top: 10px; */
+    text-align: left;
+    border: 2px solid #009FE3;
+    background-color: white;
+}
+
+#search-input {
+    height: 100%;
+    border: 0px;
+    width: 85%;
+    border-radius: 35px 0px 0px 35px;
+    padding-left: 20px;
+    font-size: 25px;
+    color : #009FE3;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+.search-bar > .search {
+    font-size: 30px;
+    color : #009FE3;
+    position: absolute;
+    /* background-color: #fff; */
+}
+
+.search-bar > .search:hover {
+    cursor: pointer;
+    color : #0182b9;
+}
+
+/* Main */
+main {
+    width: calc(700px - 40px);
+    height: calc(100% - 110px);
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: yellow; */
+}
+
+main > .top-title {
+    font-size: 30px;
+    color: rgb(65, 65, 65);
+}
+
+main > .top-title > span[class=value] {
+    color: rgb(233, 64, 64);
+}
+
+main > .top-title > span[class=market] {
+    color: #009FE3;
+}
+
+/* List */
+.lists {
+    margin-top: 10px;
+    height: 100%;
+    /* background-color: black; */
+}
+
+.lists > .list {
+    width: 90%;
+    background-color: #019de07a;
+    padding: 10px 20px;
+    color: #003c55;
+    border-radius: 20px;
+}
+
+.lists > .list > .title {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.lists > .list > .category {
+    font-size: 20px;
+    /* display: inline-block; */
+}
+
+.lists > .list > .address {
+    font-size: 20px;
+}

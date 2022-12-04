@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>춘재 | 춘천시 재래시장 통합검색 서비스</title>
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Ajax -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="main-box">
+            <div class="title-bar">
+                <img class="title-logo" src="./assets/icons/chuncheon.png" alt="춘천시 로고">
+                <p class="title c-color">춘천시 재래시장 <br>통합검색</p>
+            </div>
+            <div class="search-bar">
+                <form action="http://localhost:8080/search" method="post" id="search-form">
+                    <input type="text" name="keyword" id="search-input" placeholder="무엇을 찾고 계신가요?" maxlength="50">
+                    <a class="search" id="search-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <input type="submit" class="search" id="search-btn-form" value="전송" hidden/>
+                </form>
+            </div>
+            <!-- 검색어 추천 -->
+            <div class="suggest-bar">
+                <p class="title">춘재의 추천</p>
+                <div class="suggest-slider">
+                    <div class="suggest-box">한식</div>
+                    <div class="suggest-box">간장게장</div>
+                    <div class="suggest-box">분식</div>
+                    <div class="suggest-box">국수</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map slider -->
+    <div class="bottom-slider">
+        <p class="title c-color">춘천의 시장들</p>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="location.href='./jungang'">
+                    <p class="swiper-title">중앙시장</p>
+                    <p class="swiper-hashtags">#명동 #중앙시장</p>
+                    <img src="./assets/images/jungang.jpg" alt="춘천 중앙시장" class="swiper-image" width="100%">
+
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+
+                <div class="swiper-slide" onclick="location.href='./nambu'">
+                    <p class="swiper-title">남부시장</p>
+                    <p class="swiper-hashtags">#효자동</p>
+                    <img src="./assets/images/Nam.png" alt="춘천 남부시장" class="swiper-image" width="100%">
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+
+                <div class="swiper-slide" onclick="location.href='./dongbu'">
+                    <p class="swiper-title">동부시장</p>
+                    <p class="swiper-hashtags">#교동</p>
+                    <img src="./assets/images/east.jpg" alt="춘천 동부시장" class="swiper-image" width="100%">
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+
+                <div class="swiper-slide" onclick="location.href='./seobu'">
+                    <p class="swiper-title">서부시장</p>
+                    <p class="swiper-hashtags">#소양로 #요선동</p>
+                    <img src="./assets/images/west.jpg" alt="춘천 서부시장" class="swiper-image" width="100%">
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+
+                <div class="swiper-slide" onclick="location.href='./jonghap'">
+                    <p class="swiper-title">제일종합시장</p>
+                    <p class="swiper-hashtags">#명동</p>
+                    <img src="./assets/images/jail.png" alt="춘천 제일종합시장" class="swiper-image" width="100%">
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+
+                <div class="swiper-slide" onclick="location.href='./pungmul'">
+                    <p class="swiper-title">풍물시장</p>
+                    <p class="swiper-hashtags">#영서로 #강남동 #남춘천</p>
+                    <img src="./assets/images/pungmul_photo.jpg" alt="춘천 풍물시장" class="swiper-image" width="100%">
+                    <div class="hover-box"><p class="moveto">클릭해서 <br> 이동하기</p></div>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <script src="./js/main-swiper.js"></script>
+    <script src="./js/main-search.js"></script>
+</body>
+
+</html>

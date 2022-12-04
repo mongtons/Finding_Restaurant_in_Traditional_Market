@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>춘천 동부시장 | 춘재</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/market.css">
+    <link rel="stylesheet" href="../css/universal.css">
+
+    <!-- KAKAO MAP -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=03b766d9319c5acf32c24de7281e3949"></script>
+
+    <!-- Ajax -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-logo">
+            <img src="../assets/icons/logo_white.png" alt="춘천시 로고 흰색" height="50" onclick="location.href='../'" style="cursor: pointer;">
+            <p class="title">춘천 동부시장</p>
+        </div>
+    </header>
+
+    <div class="map" id="map"></div>
+
+    <div class="right-bar">
+        <p class="title">동부시장의 상점</p>
+        {{#Dongbu}}
+        <div class="list">
+
+                <p class="title">{{title}}</p>
+                <p class="category">{{category}}</p>
+                <p class="address">{{address}}</p>
+
+        </div>
+            {{/Dongbu}}
+    </div>
+
+    <script src="./dongbu/map.js"></script>
+</body>
+
+</html>
